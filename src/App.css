@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+.app {
+  --bg-color-1: #9db3ed;
+  --bg-color-2: #f9f9f9;
+  --text-color-1: #0b1537;
+  --text-color-2: #636363;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app[data-theme="dark"] {
+  --bg-color-1: #172d67;
+  --bg-color-2: #050c26;
+  --text-color-1: #fbfcfc;
+  --text-color-2: #bbbcbc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-scroll::-webkit-scrollbar{
+  height:3px;
+  width: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
+.custom-scroll::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb{
+  background-color: rgba(0,0,0,0.14);
+  border-radius: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(165, 163, 163);
+}
+
+.app{
+  background-color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.app_name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f1f1f1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app_calculator{
+  width: 280px;
+  height: 500px;
+  border-radius: 30px;
+  box-shadow: 1px -1px 10px 1px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(-2px 1px 5px #bab8b8) drop-shadow(4px -1px 5px #51a4ac);
 }
+
+.app_calculator_navbar{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  min-height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app_calculator_navbar_toggle{
+  height: 15px;
+  width: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 40px 80px rgba(0,0,0,0.14);
+}
+
+.app_calculator_navbar_toggle_circle{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 300ms;
+}
+
+.app_calculator_navbar_toggle_circle_active{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-left: 15px;
+  transition: 300ms;
+}
+
+.app_calculator_navbar_image{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+@media (max-width:480px)  { 
+  .app_calculator{
+    width: 100vw;
+    height: 100vh;
+    border-radius: inherit;
+  }
+ }

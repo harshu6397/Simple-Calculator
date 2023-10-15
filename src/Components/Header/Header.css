@@ -1,0 +1,90 @@
+.header {
+  flex: 1;
+  background-color: var(--bg-color-1);
+  padding: 20px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+}
+
+.header p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  color: var(--text-color-1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header_expression {
+  overflow-x: scroll;
+  width: 100%;
+  min-height: 30px;
+  position: relative;
+}
+
+.header_expression p {
+  white-space: nowrap;
+  min-width: 100%;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.header_expression i {
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  background-color: gray;
+  top: 10%;
+  right: 0;
+  animation-name: blink;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.header_result p {
+  font-weight: bold;
+  font-size: 1.3rem;
+  min-height: 30px;
+  opacity: 0.5;
+}
+
+.header_result_big p {
+  font-weight: bold;
+  font-size: 2rem;
+  min-height: 20px;
+  transition: all 0.3s;
+}
+
+.header_history {
+  overflow-y: scroll;
+}
+
+.header_history_clear_button {
+  background-color: #ccc; /* Green */
+  border: none;
+  color: white;
+  padding: 0.2rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-weight: 400;
+}
